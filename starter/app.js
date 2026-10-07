@@ -58,6 +58,11 @@ function rozejrzyj() {
 // SEKCJA B — RUCH
 function idz(kierunek) {
   // TODO B1: zablokuj ruch po koncu gry.
+  if(koniec == true)
+  {
+    console.log("Gra sie zakonczyła");
+    return 0;
+  }
   // TODO B2: switch kierunku; oblicz kandydat na nowy pokoj.
   // TODO B3: odrzuc pokoj poza 1..4 i nieznany kierunek bez kosztu.
   // TODO B4: zapisz poprawny pokoj, rozejrzyj(), zakonczTure().
