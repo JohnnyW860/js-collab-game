@@ -106,12 +106,73 @@ function idz(kierunek) {
 // SEKCJA C — PRZEDMIOTY I WYGRANA
 function akcja(co) {
   // TODO C1: zablokuj akcje po koncu gry.
+  if (koniec) {
+    console.log("Gra jest juz zakonczona.");
+    return;
+  }
   // TODO C2: switch: karta / bezpiecznik / napraw / wyjdz.
-  // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
-  // TODO C3: przy odrzuceniu return; przy sukcesie break.
+  switch (co) {
+    case "karta":
+      // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
+      if (pokoj !== 1 || karta) {
+        console.log("Tutaj nie ma karty do zabrania.");
+        // TODO C3: przy odrzuceniu return; przy sukcesie break.
+        return;
+      }
+
+      karta = true;
+      console.log("Zabierasz karte.");
+      // TODO C3: przy odrzuceniu return; przy sukcesie break.
+      break;
+
+    case "bezpiecznik":
+      // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
+      if (pokoj !== 2 || bezpiecznik || zasilanie) {
+        console.log("Tutaj nie ma bezpiecznika do zabrania.");
+        // TODO C3: przy odrzuceniu return; przy sukcesie break.
+        return;
+      }
+
+      bezpiecznik = true;
+      console.log("Zabierasz bezpiecznik.");
+      // TODO C3: przy odrzuceniu return; przy sukcesie break.
+      break;
+
+    case "napraw":
+      // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
+      if (pokoj !== 3 || !bezpiecznik || zasilanie) {
+        console.log("Nie mozesz teraz naprawic zasilania.");
+        // TODO C3: przy odrzuceniu return; przy sukcesie break.
+        return;
+      }
+
+      bezpiecznik = false;
+      zasilanie = true;
+      console.log("Montujesz bezpiecznik. Zasilanie zostalo przywrocone.");
+      // TODO C3: przy odrzuceniu return; przy sukcesie break.
+      break;
+
+    case "wyjdz":
+      // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
+      if (pokoj !== 4 || !karta || !zasilanie) {
+        console.log("Nie mozesz jeszcze otworzyc wyjscia.");
+        // TODO C3: przy odrzuceniu return; przy sukcesie break.
+        return;
+      }
+       // TODO C4: wygrana i koniec ustawione przed rozliczeniem tury!
+      wygrana = true;
+      koniec = true;
+      console.log("Otwierasz drzwi i uciekasz z serwerowni! WYGRANA!");
+      // TODO C3: przy odrzuceniu return; przy sukcesie break.
+      break;
+
+    default:
+      console.log("Nieznana akcja. Uzyj: karta, bezpiecznik, napraw lub wyjdz.");
+      // TODO C3: przy odrzuceniu return; przy sukcesie break.
+      return;
+  }
   // TODO C3: po switch jedno zakonczTure().
-  // TODO C4: wygrana i koniec ustawione przed rozliczeniem tury!
-  console.log("Akcje do uzupelnienia");
+  zakonczTure()
 }
 
 start();
