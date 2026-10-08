@@ -44,3 +44,16 @@ Pierwsze użycie akcja("przedmiot") zabiera przedmiot i zużywa 1 energię. Drug
 
 Wynik otrzymany:
 Pierwsza próba wyświetliła Zabierasz przedmiot,który podałeś. i energia zmniejszyła się z 10 do 9. Druga próba wyświetliła Tutaj nie ma przedmiotu do zabrania. i nie zużyła dodatkowej energii.
+
+5. Wynik oczekiwany: nie da sie wyjsc bez naprawienia zasilania, nie da sie naprawic zasilania bez bezpiecznika
+Wynik otrzymany: Zgodny z wynikiem oczekiwanym, fukcje działaja poprawnie
+Sprawdzał Johnny
+6. Wynik oczekiwany: Po zabraniu karty i bezpiecznika da sie naprawic zasilanie i wyjsc z serwerowni
+Wynik otrzymany: Zgdony z wynikiem oczekiwanym, fukcje dzialaja poprawnie i bez zbednych krokow oraz zuzywania za duzej ilosci energii da sie przejsc grę.
+Sprawdzał Johnny
+7. Wynik oczekiwany: Gra konczy sie po zuzyciu 10 punktow energii i nie wazne co uzytkownik zrobi, gra bedzie przegrana
+Wynik otrzymany: Zgodny z wynikiem oczekiwanym, po wykonczeniu energii gra sie konczy i inne komendy nie zmieniaja tego
+Sprawdzał Johnny
+8. Wynik oczekiwany: start() przywraca energie, pozycje oraz wszystkie flagi
+Wynik otrzymany: zgodny z oczekiwanym, start() działa jak powinien
+Sprawdzał Johnny
