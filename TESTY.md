@@ -45,6 +45,8 @@ Pierwsze użycie akcja("przedmiot") zabiera przedmiot i zużywa 1 energię. Drug
 Wynik otrzymany:
 Pierwsza próba wyświetliła Zabierasz przedmiot,który podałeś. i energia zmniejszyła się z 10 do 9. Druga próba wyświetliła Tutaj nie ma przedmiotu do zabrania. i nie zużyła dodatkowej energii.
 
+Punkt 1-4 sprawdzał filipjaz
+
 5. Wynik oczekiwany: nie da sie wyjsc bez naprawienia zasilania, nie da sie naprawic zasilania bez bezpiecznika
 Wynik otrzymany: Zgodny z wynikiem oczekiwanym, fukcje działaja poprawnie
 Sprawdzał Johnny
